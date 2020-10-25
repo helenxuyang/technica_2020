@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import Grid from '@material-ui/core/Grid';
+import logo from './questodo.svg';
 import './App.css';
+import Avatar from './Avatar';
+import QuestList from './QuestList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <img src={logo} alt="Logo" width="300px"></img>
+      <Grid container spacing={4}>
+        <Grid item xs={12} sm={3}><Avatar /></Grid>
+        <Grid item xs={12} sm={9}><QuestList /></Grid>
+      </Grid>
     </div>
   );
 }
